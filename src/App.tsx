@@ -3,11 +3,10 @@ import React from 'react';
 // eslint-disable-next-line prettier/prettier
 import { NavigationContainer } from '@react-navigation/native';
 // eslint-disable-next-line prettier/prettier
-import { createStackNavigator, StackNavigationProp } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 // eslint-disable-next-line prettier/prettier
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // eslint-disable-next-line prettier/prettier
-import { RouteProp } from '@react-navigation/native';
 import WelcomeScreen from './screens/WelcomeScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import LoginScreen from './screens/LoginScreen';
