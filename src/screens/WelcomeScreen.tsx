@@ -8,6 +8,14 @@ type RootStackParamList = {
   Welcome: undefined;
   SignUp: undefined;
   Login: undefined;
+  Home: undefined;
+  Profile: undefined;
+  Settings: undefined;
+  TaskList: undefined;
+  TaskDetailsScreen: undefined;
+  AddEditTaskScreen: undefined;
+  StatisticsScreen: undefined;
+  NotificationsScreen: undefined;
 };
 
 type WelcomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Welcome'>;
