@@ -1,42 +1,24 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RouteProp } from '@react-navigation/native';
+import { View, Text, Button } from 'react-native';
+import { StackScreenProps } from '@react-navigation/stack';
 
 type RootStackParamList = {
   Welcome: undefined;
   SignUp: undefined;
   Login: undefined;
+  // other screens...
 };
 
-type LoginScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
-type LoginScreenRouteProp = RouteProp<RootStackParamList, 'Login'>;
-
-type Props = {
-  navigation: LoginScreenNavigationProp;
-  route: LoginScreenRouteProp;
-};
+type Props = StackScreenProps<RootStackParamList, 'Login'>;
 
 const LoginScreen: React.FC<Props> = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
-      <Button title="Back to Welcome" onPress={() => navigation.navigate('Welcome')} />
+    <View>
+      <Text>Login</Text>
+      <Button title="Go to Sign Up" onPress={() => navigation.navigate('SignUp')} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 24,
-    marginBottom: 20,
-  },
-});
 
 export default LoginScreen;
