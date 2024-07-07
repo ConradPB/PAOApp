@@ -1,51 +1,25 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RouteProp } from '@react-navigation/native';
+import { View, Text, Button } from 'react-native';
+import { StackScreenProps } from '@react-navigation/stack';
 
 type RootStackParamList = {
   Welcome: undefined;
   SignUp: undefined;
   Login: undefined;
-  Home: undefined;
-  Profile: undefined;
-  Settings: undefined;
-  TaskList: undefined;
-  TaskDetailsScreen: undefined;
-  AddEditTaskScreen: undefined;
-  StatisticsScreen: undefined;
-  NotificationsScreen: undefined;
+  // other screens...
 };
 
-type WelcomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Welcome'>;
-type WelcomeScreenRouteProp = RouteProp<RootStackParamList, 'Welcome'>;
-
-type Props = {
-  navigation: WelcomeScreenNavigationProp;
-  route: WelcomeScreenRouteProp;
-};
+type Props = StackScreenProps<RootStackParamList, 'Welcome'>;
 
 const WelcomeScreen: React.FC<Props> = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Welcome to PÃO</Text>
+    <View>
+      <Text>Welcome to PÃO</Text>
       <Button title="Sign Up" onPress={() => navigation.navigate('SignUp')} />
       <Button title="Login" onPress={() => navigation.navigate('Login')} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 24,
-    marginBottom: 20,
-  },
-});
 
 export default WelcomeScreen;
