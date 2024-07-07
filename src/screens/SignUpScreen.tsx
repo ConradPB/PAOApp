@@ -1,31 +1,43 @@
 /* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import React from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../types';
+import { RouteProp } from '@react-navigation/native';
+
+type RootStackParamList = {
+  Welcome: undefined;
+  SignUp: undefined;
+  Login: undefined;
+};
 
 type SignUpScreenNavigationProp = StackNavigationProp<RootStackParamList, 'SignUp'>;
+type SignUpScreenRouteProp = RouteProp<RootStackParamList, 'SignUp'>;
 
-const SignUpScreen = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigation = useNavigation<SignUpScreenNavigationProp>();
+type Props = {
+  navigation: SignUpScreenNavigationProp;
+  route: SignUpScreenRouteProp;
+};
 
-  const handleSignUp = () => {
-
-    navigation.navigate('Home');
-  };
-
+const SignUpScreen: React.FC<Props> = ({ navigation }) => {
   return (
-    <View>
-      <Text>Sign Up</Text>
-      <TextInput placeholder="Email" value={email} onChangeText={setEmail} />
-      <TextInput placeholder="Password" value={password} onChangeText={setPassword} secureTextEntry />
-      <Button title="Sign Up" onPress={handleSignUp} />
+    <View style={styles.container}>
+      <Text style={styles.title}>Sign Up</Text>
+      <Button title="Back to Welcome" onPress={() => navigation.navigate('Welcome')} />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 24,
+    marginBottom: 20,
+  },
+});
 
 export default SignUpScreen;
 
