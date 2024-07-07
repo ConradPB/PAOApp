@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
-import { useNavigation, StackNavigationProp } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
 
 type SignUpScreenNavigationProp = StackNavigationProp<RootStackParamList, 'SignUp'>;
@@ -12,7 +13,7 @@ const SignUpScreen = () => {
   const navigation = useNavigation<SignUpScreenNavigationProp>();
 
   const handleSignUp = () => {
-    // Handle sign up logic here
+
     navigation.navigate('Home');
   };
 
@@ -27,3 +28,4 @@ const SignUpScreen = () => {
 };
 
 export default SignUpScreen;
+
