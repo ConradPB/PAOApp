@@ -1,12 +1,10 @@
+/* eslint-disable prettier/prettier */
 import 'react-native-gesture-handler';
 import React from 'react';
-// eslint-disable-next-line prettier/prettier
 import { NavigationContainer } from '@react-navigation/native';
-// eslint-disable-next-line prettier/prettier
 import { createStackNavigator } from '@react-navigation/stack';
-// eslint-disable-next-line prettier/prettier
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// eslint-disable-next-line prettier/prettier
+
 import WelcomeScreen from './screens/WelcomeScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import LoginScreen from './screens/LoginScreen';
@@ -16,11 +14,10 @@ import SettingsScreen from './screens/SettingsScreen';
 import TaskListScreen from './screens/TaskListScreen';
 import TaskDetailsScreen from './screens/TaskDetailsScreen';
 import AddEditTaskScreen from './screens/AddEditTaskScreen';
+import StatisticsScreen from './screens/StatisticsScreen';
+import NotificationsScreen from './screens/NotificationsScreen';
 
-// eslint-disable-next-line prettier/prettier
-import { RootStackParamList } from './types';
-
-const Stack = createStackNavigator<RootStackParamList>();
+const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const HomeTabNavigator = () => (
@@ -28,6 +25,7 @@ const HomeTabNavigator = () => (
     <Tab.Screen name="Home" component={HomeScreen} />
     <Tab.Screen name="Profile" component={ProfileScreen} />
     <Tab.Screen name="Settings" component={SettingsScreen} />
+    <Tab.Screen name="Notifications" component={NotificationsScreen} />
   </Tab.Navigator>
 );
 
@@ -41,6 +39,7 @@ const App = () => (
       <Stack.Screen name="TaskList" component={TaskListScreen} />
       <Stack.Screen name="TaskDetails" component={TaskDetailsScreen} />
       <Stack.Screen name="AddEditTask" component={AddEditTaskScreen} />
+      <Stack.Screen name="Statistics" component={StatisticsScreen} />
     </Stack.Navigator>
   </NavigationContainer>
 );
