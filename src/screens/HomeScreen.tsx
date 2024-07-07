@@ -1,5 +1,5 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
+// eslint-disable-next-line prettier/prettier
 import { View, Text, StyleSheet } from 'react-native';
 
 const HomeScreen: React.FC = () => {
@@ -23,4 +23,3 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
-
