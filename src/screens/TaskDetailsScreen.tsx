@@ -2,10 +2,10 @@ import React from 'react';
 // eslint-disable-next-line prettier/prettier
 import { View, Text, StyleSheet } from 'react-native';
 
-const TaskListScreen: React.FC = () => {
+const TaskDetailsScreen: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Task List</Text>
+      <Text style={styles.title}>Task Details</Text>
     </View>
   );
 };
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TaskListScreen;
+export default TaskDetailsScreen;
