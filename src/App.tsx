@@ -2,7 +2,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator, StackScreenProps } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // Import screen components
@@ -20,17 +20,6 @@ import NotificationsScreen from './screens/NotificationsScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-
-type RootStackParamList = {
-  Welcome: undefined;
-  SignUp: undefined;
-  Login: undefined;
-  Home: undefined;
-  TaskList: undefined;
-  TaskDetails: undefined;
-  AddEditTask: undefined;
-  Statistics: undefined;
-};
 
 const HomeTabNavigator = () => (
   <Tab.Navigator>
