@@ -1,11 +1,13 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-// eslint-disable-next-line prettier/prettier
 import { View, Text, Button } from 'react-native';
-// eslint-disable-next-line prettier/prettier
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, StackNavigationProp } from '@react-navigation/native';
+import { RootStackParamList } from '../types';
+
+type WelcomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Welcome'>;
 
 const WelcomeScreen = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<WelcomeScreenNavigationProp>();
 
   return (
     <View>
@@ -17,3 +19,4 @@ const WelcomeScreen = () => {
 };
 
 export default WelcomeScreen;
+
