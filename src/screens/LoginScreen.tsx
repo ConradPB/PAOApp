@@ -2,13 +2,8 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../types';
 
-type RootStackParamList = {
-  Welcome: undefined;
-  SignUp: undefined;
-  Login: undefined;
-  // other screens...
-};
 
 type Props = StackScreenProps<RootStackParamList, 'Login'>;
 
