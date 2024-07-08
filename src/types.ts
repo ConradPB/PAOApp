@@ -8,4 +8,3 @@ export type RootStackParamList = {
     TaskDetails: { id: string };
     AddEditTask: { id?: string };
   };
-  
