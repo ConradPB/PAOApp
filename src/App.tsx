@@ -12,10 +12,10 @@ const Stack = createStackNavigator<RootStackParamList>();
 const App: React.FC = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Welcome'>
-        <Stack.Screen name='Welcome' component={WelcomeScreen} />
-        <Stack.Screen name='SignUp' component={SignUpScreen} />
-        <Stack.Screen name='Login' component={LoginScreen} />
+      <Stack.Navigator initialRouteName="Welcome">
+        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
         {/* Add other screens here */}
       </Stack.Navigator>
     </NavigationContainer>
