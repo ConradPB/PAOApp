@@ -5,7 +5,7 @@ import { View, Text, StyleSheet } from 'react-native';
 const AddEditTaskScreen: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Add/Edit Task</Text>
+      <Text style={styles.title}>Add/Edit </Text>
     </View>
   );
 };
